@@ -161,10 +161,10 @@ function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
-            Natives is building the digital infrastructure that connects NGOs,
+            Impact Natives is building the digital infrastructure that connects NGOs,
             corporates, governments, donors, and social enterprise founders to
             discover each other, form partnerships, mobilise capital, and verify
-            impact — across Africa.
+            impact across Africa.
           </motion.p>
           <motion.div
             className="mt-10 flex flex-col sm:flex-row gap-3"
