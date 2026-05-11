@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -35,10 +34,6 @@ import {
   Lightbulb,
   Coins,
 } from "lucide-react";
-
-export const Route = createFileRoute("/")({
-  component: Landing,
-});
 
 /* ---------- Reusable section wrapper with fade-up ---------- */
 function Section({
@@ -612,3 +607,5 @@ function Landing() {
     </div>
   );
 }
+
+export default Landing;
