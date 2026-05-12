@@ -322,7 +322,7 @@ const items = [
     {
       icon: Briefcase,
       title: "Entrepreneurship and MSMEs",
-      body: "Supporting early-stage founders and small businesses with capital access, partnerships, and market linkages.",
+      body: "Connecting founders and MSMEs to the partnerships, capital, and ecosystem infrastructure needed to scale sustainable solutions.",
     },
   ];
   return (
@@ -330,9 +330,9 @@ const items = [
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel>Where We Start</SectionLabel>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl leading-tight">
-          Launching in three sectors where coordination gaps are most acute.
+          Launching in the sectors where coordination gaps are most acute.
         </h2>
-        <div className="mt-14 grid md:grid-cols-2 gap-6">
+        <div className="mt-14 grid grid-cols-3 gap-6">
           {items.map((it, i) => {
             const Icon = it.icon;
             return (
@@ -342,7 +342,7 @@ const items = [
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative overflow-hidden bg-white border border-border p-8 rounded-md transition-colors duration-500 hover:bg-brand-green-deep cursor-default"
+                className={`group relative overflow-hidden bg-white border border-border p-8 rounded-md transition-colors duration-500 hover:bg-brand-green-deep cursor-default ${i === 3 ? "col-span-3" : ""}`}
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-[0.08] transition-opacity duration-500"
