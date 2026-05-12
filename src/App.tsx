@@ -322,7 +322,7 @@ const items = [
     {
       icon: Briefcase,
       title: "Entrepreneurship and MSMEs",
-      body: "Connecting founders and MSMEs to the partnerships, capital, and ecosystem infrastructure needed to scale sustainable solutions.",
+      body: "Supporting early-stage founders and small businesses with capital access, partnerships, and market linkages.",
     },
   ];
   return (
@@ -330,9 +330,9 @@ const items = [
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel>Where We Start</SectionLabel>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl leading-tight">
-          Launching in the sectors where coordination gaps are most acute.
+          Launching in three sectors where coordination gaps are most acute.
         </h2>
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
           {items.map((it, i) => {
             const Icon = it.icon;
             return (
@@ -342,7 +342,7 @@ const items = [
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative overflow-hidden bg-white border border-border p-8 rounded-md transition-colors duration-500 hover:bg-brand-green-deep cursor-default ${i === 3 ? "col-span-3" : ""}`}"
+                className="group relative overflow-hidden bg-white border border-border p-8 rounded-md transition-colors duration-500 hover:bg-brand-green-deep cursor-default"
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-[0.08] transition-opacity duration-500"
@@ -387,19 +387,17 @@ function Audience() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl leading-tight">
           Six actors. One coordinated ecosystem.
         </h2>
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {items.map((it, i) => {
             const Icon = it.icon;
             return (
               <motion.div
                 key={it.title}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`group relative overflow-hidden bg-white border border-border p-8 rounded-md transition-colors duration-500 hover:bg-brand-green-deep cursor-default ${
-                  i === 3 ? "sm:col-span-3" : ""
-                }`}
+                transition={{ duration: 0.45, delay: i * 0.07 }}
+                className="group bg-white border-2 border-border p-7 rounded-md transition-all duration-300 hover:border-brand-orange hover:bg-[oklch(0.97_0.03_45)]"
               >
                 <Icon className="w-7 h-7 text-brand-orange mb-4 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="text-lg font-bold mb-2">{it.title}</h3>
