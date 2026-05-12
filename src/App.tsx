@@ -332,7 +332,7 @@ const items = [
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl leading-tight">
           Launching in the sectors where coordination gaps are most acute.
         </h2>
-        <div className="mt-14 grid grid-cols-3 gap-6">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((it, i) => {
             const Icon = it.icon;
             return (
@@ -342,7 +342,7 @@ const items = [
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`group relative overflow-hidden bg-white border border-border p-8 rounded-md transition-colors duration-500 hover:bg-brand-green-deep cursor-default ${i === 3 ? "col-span-3" : ""}`}
+                className={`group relative overflow-hidden bg-white border border-border p-8 rounded-md transition-colors duration-500 cursor-default ${i === 3 ? "md:col-span-3 text-center hover:bg-brand-orange" : "hover:bg-brand-green-deep"}`}
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-[0.08] transition-opacity duration-500"
@@ -353,7 +353,7 @@ const items = [
                   }}
                 />
                 <div className="relative">
-                  <Icon className="w-8 h-8 text-brand-green mb-5 transition-colors duration-500 group-hover:text-white" />
+                  <Icon className={`w-8 h-8 text-brand-green mb-5 transition-colors duration-500 group-hover:text-white ${i === 3 ? "mx-auto text-brand-orange" : ""}`} />
                   <h3 className="text-2xl font-bold mb-3 text-foreground transition-colors duration-500 group-hover:text-white">
                     {it.title}
                   </h3>
