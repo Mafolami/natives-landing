@@ -302,21 +302,27 @@ function Platform() {
 
 /* ---------- Launch sectors ---------- */
 function Sectors() {
-  const items = [
+// REPLACE WITH:
+const items = [
     {
       icon: Sprout,
-      title: "Agritech",
+      title: "Agriculture and Food Systems",
       body: "Connecting founders, NGOs, offtakers, and funders across African agricultural value chains.",
     },
     {
       icon: Sun,
-      title: "Climate",
+      title: "Climate Change",
       body: "Coordinating adaptation, resilience, and clean energy initiatives across the continent.",
     },
     {
       icon: HeartPulse,
-      title: "Health",
+      title: "Healthcare",
       body: "Linking community health implementers, digital health founders, and institutional funders.",
+    },
+    {
+      icon: Briefcase,
+      title: "Entrepreneurship and MSMEs",
+      body: "Supporting early-stage founders and small businesses with capital access, partnerships, and market linkages.",
     },
   ];
   return (
@@ -326,7 +332,7 @@ function Sectors() {
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl leading-tight">
           Launching in three sectors where coordination gaps are most acute.
         </h2>
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
           {items.map((it, i) => {
             const Icon = it.icon;
             return (
